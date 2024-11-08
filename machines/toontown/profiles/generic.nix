@@ -9,6 +9,7 @@
   };
 
   nix = {
+    #package = pkgs.nixVersions.latest;
     settings = {
       sandbox = true;
     };
@@ -20,12 +21,6 @@
       keep-outputs = true
       keep-derivations = true
     '';
-  };
-
-  programs.gnupg.agent = {
-    enable = true;
-    pinentryFlavor = "qt";
-    enableSSHSupport = true;
   };
 
   services = {

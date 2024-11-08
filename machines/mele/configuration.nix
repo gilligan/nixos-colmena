@@ -2,7 +2,7 @@
 
 {
   imports =
-    [ 
+    [
       ./hardware-configuration.nix
     ];
 
@@ -12,7 +12,7 @@
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "mele"; # Define your hostname.
-  networking.wireless.enable = false;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = false; # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Berlin";
@@ -54,19 +54,19 @@
     localRoot = "${config.services.paperless.consumptionDir}";
     writeEnable = true;
     extraConfig = ''
-       local_umask=033
+      local_umask=033
     '';
   };
 
   networking.hosts = {
-   "192.168.178.104" = [ "mele.local" ]; 
-   "192.168.178.20" = [ "toontown.local" ]; 
+    "192.168.178.104" = [ "mele.local" ];
+    "192.168.178.20" = [ "toontown.local" ];
   };
   services.dnsmasq = {
     enable = true;
-    servers = [
+    settings.servers = [
       "8.8.8.8"
-      "4.4.4.4" 
+      "4.4.4.4"
     ];
   };
 
@@ -75,7 +75,7 @@
     isNormalUser = true;
     description = "gilligan";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages

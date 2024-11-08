@@ -4,25 +4,18 @@
     ./hardware.nix
 
     ./profiles/generic.nix
-    ./profiles/plasma5-with-i3.nix
     ./profiles/terminal.nix
-    ./profiles/pulseaudio.nix
-    ./profiles/nix-direnv.nix
-    ./profiles/jellyfin.nix
+    ../../profiles/hyprland.nix
+    ../../profiles/keyd.nix
   ];
 
-
   nix = {
+    nixPath = [ "nixpkgs=${pkgs.path}" ];
     settings = {
       trusted-users = [ "root" "gilligan" ];
+      experimental-features = [ "nix-command" "flakes" ];
       cores = 16;
     };
-  };
-
-  nixpkgs = {
-    overlays = [
-      (import ./overlays/i3.nix)
-    ];
   };
 
   networking = {
@@ -38,7 +31,7 @@
   };
 
   programs.steam.enable = true;
-
+  programs.direnv.enable = true;
 
   virtualisation = {
     docker.enable = true;
@@ -54,5 +47,6 @@
     home = "/home/gilligan";
     shell = "/run/current-system/sw/bin/zsh";
   };
+
   system.stateVersion = "20.03";
 }

@@ -17,23 +17,12 @@ in
     xserver = {
       enable = true;
 
-      desktopManager = {
-        plasma5.enable = true;
-        xterm.enable = true;
+      displayManager.sddm = {
+        enable = true;
+        wayland.enable = true;
       };
 
-      displayManager = {
-        defaultSession = "plasma+i3";
-        session = [
-          {
-            manage = "desktop";
-            name = "plasma+i3";
-            start = ''
-              exec env KDEWM=${i3-wrapper}/bin/i3 ${pkgs.plasma-workspace}/bin/startplasma-x11
-            '';
-          }
-        ];
-      };
+      desktopManager.plasma5.enable = true;
 
       windowManager.i3 = {
         enable = true;
@@ -61,7 +50,7 @@ in
     variables = {
       KDEWM = "/run/current-system/sw/bin/i3";
       XCURSOR_THEME = "Adwaita";
-      XCURSOR_SIZE = "64";
+      XCURSOR_SIZE = "48";
     };
     etc = {
       "Xmodmap".text = ''

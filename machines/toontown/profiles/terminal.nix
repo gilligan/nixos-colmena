@@ -17,7 +17,6 @@
       FZF_DEFAULT_COMMAND = "ag -g \"\"";
     };
     systemPackages = with pkgs; [
-      silver-searcher
       direnv
       entr
       file
@@ -27,11 +26,13 @@
       gitAndTools.tig
       jq
       killall
-      npins
-      neovim-nix
+      neovim
+      nil
       nix-index
+      npins
       ripgrep
       shellcheck
+      silver-searcher
       tmate
       wget
     ];
