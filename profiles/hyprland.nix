@@ -32,7 +32,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    gnome3.adwaita-icon-theme
+    gnome.adwaita-icon-theme
     grim
     grimblast
     kitty

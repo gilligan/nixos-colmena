@@ -2,9 +2,9 @@
   "pins": {
     "nixpkgs": {
       "type": "Channel",
-      "name": "nixos-24.05",
-      "url": "https://releases.nixos.org/nixos/24.05/nixos-24.05.6258.dba414932936/nixexprs.tar.xz",
-      "hash": "09l11pcp7wm6wi2hr68vgi3wqd95xwg92kl97h4cm7033vbh9mw4"
+      "name": "nixpkgs-unstable",
+      "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.05pre709559.5083ec887760/nixexprs.tar.xz",
+      "hash": "1z912j1lmrg8zp2hpmmi69dls9zlpvqfvdkvh5xc3x6iqkqwn0cd"
     },
     "npins": {
       "type": "Git",
@@ -14,9 +14,9 @@
         "repo": "npins"
       },
       "branch": "master",
-      "revision": "9ba93b1ec2458b293b59c03d27e84546b33bc92c",
-      "url": "https://github.com/andir/npins/archive/9ba93b1ec2458b293b59c03d27e84546b33bc92c.tar.gz",
-      "hash": "0md58hr7gxf8kgmnhxjks8w8h8ks09cq6bkpzb6np7m4gwz81l5s"
+      "revision": "6271c949b97d1661948c2bc082bc8e5cd2ba8e27",
+      "url": "https://github.com/andir/npins/archive/6271c949b97d1661948c2bc082bc8e5cd2ba8e27.tar.gz",
+      "hash": "0yd94cwmv118zjvk8xir1qw3dr4kr7v1nd5qhpc9078yjzi8p0qy"
     }
   },
   "version": 3
