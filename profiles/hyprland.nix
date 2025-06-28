@@ -12,6 +12,14 @@ in
 
 {
 
+  services.displayManager = {
+    defaultSession = "hyprland";
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+  };
+
   programs.hyprland.enable = true;
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk xdg-desktop-portal-hyprland ];
@@ -32,7 +40,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    gnome.adwaita-icon-theme
+    adwaita-icon-theme
     grim
     grimblast
     kitty
@@ -68,7 +76,6 @@ in
       fira-mono
       powerline-fonts
       font-awesome
-      nerdfonts
     ];
   };
 }
