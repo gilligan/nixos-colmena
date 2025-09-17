@@ -56,6 +56,7 @@ in
     waybar
     wezterm
     wlogout
+    google-chrome
     scaled-chrome
     slack
     spotify
