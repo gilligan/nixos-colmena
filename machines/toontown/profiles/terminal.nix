@@ -51,7 +51,7 @@
       enableCompletion = true;
       ohMyZsh = {
         enable = true;
-        plugins = [ "git" "docker" "cp" ];
+        plugins = [ "git" ];
         theme = "obraun";
       };
       shellAliases = {
