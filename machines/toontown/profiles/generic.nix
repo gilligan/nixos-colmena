@@ -5,7 +5,10 @@
 
   boot = {
     loader.systemd-boot.enable = true;
+    loader.grub.gfxmodeEfi = "1920x1080";
+    loader.grub.gfxpayloadEfi = "keep";
     tmp.cleanOnBoot = true;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   nix = {
