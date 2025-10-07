@@ -26,6 +26,7 @@
       gitAndTools.tig
       jq
       killall
+      mergiraf
       neovim
       nil
       nix-index

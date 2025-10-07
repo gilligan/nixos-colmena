@@ -41,6 +41,7 @@ in
 
   environment.systemPackages = with pkgs; [
     adwaita-icon-theme
+    cliphist
     grim
     grimblast
     kitty
@@ -56,6 +57,7 @@ in
     waybar
     wezterm
     wlogout
+    wl-clipboard
     google-chrome
     scaled-chrome
     slack
@@ -63,6 +65,10 @@ in
     udiskie
     waynal
     zoom-us
+    hyprpanel
+    hyprshot
+    hyprshade
+    pamixer
   ];
 
   fonts = {
