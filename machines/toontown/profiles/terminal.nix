@@ -18,6 +18,7 @@
     };
     systemPackages = with pkgs; [
       direnv
+      difftastic
       entr
       file
       fzf
@@ -52,7 +53,18 @@
       enableCompletion = true;
       ohMyZsh = {
         enable = true;
-        plugins = [ "git" ];
+        plugins = [ 
+          "git" 
+          "1password"
+          "docker"
+          "cabal"
+          "docker-compose"
+          "fzf"
+          "kitty"
+          "npm"
+          "pip"
+          "rust"
+        ];
         theme = "obraun";
       };
       shellAliases = {
