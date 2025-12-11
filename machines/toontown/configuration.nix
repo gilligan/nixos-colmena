@@ -5,6 +5,7 @@
 
     ./profiles/generic.nix
     ./profiles/terminal.nix
+    # ./profiles/gitlab.nix
     ../../profiles/hyprland.nix
     ../../profiles/keyd.nix
   ];
@@ -21,6 +22,9 @@
   networking = {
     hostName = "toontown";
     networkmanager.enable = true;
+    extraHosts = ''
+      127.0.0.1 exporto-postgres
+    '';
     firewall = {
       enable = false;
     };
@@ -28,6 +32,7 @@
 
   hardware = {
     opengl.enable = true;
+    keyboard.zsa.enable = true;
   };
 
   programs.steam.enable = true;

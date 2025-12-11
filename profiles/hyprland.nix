@@ -49,6 +49,7 @@ in
     cliphist
     grim
     grimblast
+    keymapp
     kitty
     libnotify
     libsForQt5.qt5ct
@@ -56,7 +57,7 @@ in
     mako
     networkmanagerapplet
     nwg-look
-    rofi-wayland
+    rofi
     swaynotificationcenter
     swww
     waybar
@@ -81,7 +82,6 @@ in
     enableGhostscriptFonts = true;
     packages = with pkgs; [
       corefonts
-      emojione
       fira
       fira-code
       fira-code-symbols

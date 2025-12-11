@@ -22,9 +22,9 @@
       entr
       file
       fzf
-      gitAndTools.gitFull
-      gitAndTools.hub
-      gitAndTools.tig
+      gitFull
+      hub
+      tig
       jq
       killall
       mergiraf
@@ -34,6 +34,8 @@
       npins
       ripgrep
       shellcheck
+      tmux
+      tuckr
       silver-searcher
       tmate
       wget
@@ -42,19 +44,13 @@
 
   programs = {
     command-not-found.enable = true;
-    tmux = {
-      enable = true;
-      terminal = "screen-256color";
-      extraConfig = builtins.readFile ../assets/tmux.conf;
-
-    };
     zsh = {
       enable = true;
       enableCompletion = true;
       ohMyZsh = {
         enable = true;
-        plugins = [ 
-          "git" 
+        plugins = [
+          "git"
           "1password"
           "docker"
           "cabal"
